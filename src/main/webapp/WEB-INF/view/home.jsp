@@ -4,7 +4,7 @@
 </head>
 <body>
 
-<form method="GET" enctype="multipart/form-data" action="${pageContext.request.contextPath}/ref">
+<form method="POST" enctype="multipart/form-data" action="${pageContext.request.contextPath}/summary">
     <input type="file" name="document">
     <button type="submit">GO</button>
 </form>

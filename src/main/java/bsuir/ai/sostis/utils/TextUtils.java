@@ -12,10 +12,10 @@ import java.util.regex.Pattern;
 @Component
 public class TextUtils {
 
-    private static final Pattern SENTENCE_PATTERN = Pattern.compile("^[A-ZА-Я]+[A-Za-zА-Яа-я0-9,;'\"\\s]*[.?!]$");
+    private static final Pattern SENTENCE_PATTERN = Pattern.compile("[A-ZА-Я]+[A-Za-zА-Яа-я0-9,;'\"\\s]*[.?!]\\s*");
 
     public static Map<Integer, String> createSentences(MultipartFile file) throws IOException {
-        Map<Integer, String> sentences = new HashMap<Integer, String>();
+        Map<Integer, String> sentences = new HashMap<>();
         Matcher matcher = SENTENCE_PATTERN.matcher(new String(file.getBytes()));
         int sentenceNumber = 0;
         while (matcher.find()) {
