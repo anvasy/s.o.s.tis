@@ -24,7 +24,7 @@ public class SummaryController {
     @PostMapping(value = "/summary", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     public ResponseEntity summarize(@RequestParam("document") MultipartFile file) {
         try {
-            TextUtils.createSentences(file);
+            TextUtils.createDocument(file);
         } catch (IOException e) {
             e.printStackTrace();
         }

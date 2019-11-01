@@ -12,7 +12,8 @@ import javax.persistence.Entity;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class Summary {
-    private String source;
-    private String essay;
+public class Word {
+    private Integer number;
+    private String text;
+    private Integer rank;
 }
