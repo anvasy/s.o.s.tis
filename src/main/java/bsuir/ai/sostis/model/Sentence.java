@@ -15,7 +15,6 @@ import java.util.List;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Sentence {
     Integer number;
     String text;

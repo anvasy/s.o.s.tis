@@ -14,7 +14,6 @@ import javax.persistence.Entity;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Word {
     Integer number;
     String text;

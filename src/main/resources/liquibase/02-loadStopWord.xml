@@ -1,0 +1,461 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+
+    <changeSet id="insert_stop_word" author="Ann Vasilyeva">
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="а"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="б"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="будет"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="будит"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="буедт"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="бфть"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="бы"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="был"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="была"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="были"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="было"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="быть"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="в"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="вам"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="вас"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="весь"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="во"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="вот"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="все"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="всего"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="всех"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="вы"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="г"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="д"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="да"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="для"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="дни"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="днями"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="до"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="дык"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="дял"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="е"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ё"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="евсь"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="его"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ее"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ей"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="если"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="есть"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="еще"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ж"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="же"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="з"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="за"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="и"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ибо"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="из"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="или"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="им"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="имхо"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="их"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="й"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="к"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="как"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="какже"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ко"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="когда"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="коотрый"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="которая"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="которйо"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="которой"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="который"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="которых"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="кто"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="л"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="м"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мегалол"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="меня"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мля"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мне"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мной"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="могли"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="могу"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="могут"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="может"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мочь"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="мы"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="н"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="на"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="нах"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="нас"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="наш"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="не"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="него"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="нее"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="нет"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="них"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="но"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="о"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="об"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="омчь"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="он"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="она"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="они"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="оно"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="от"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ответ"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="п"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="по"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="при"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="р"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="с"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="свйо"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="свое"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="свой"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="своя"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="себя"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="собой"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="т"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тагда"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="так"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="такйо"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="такой"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="те"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тебя"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тем"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="то"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тобой"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тогда"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="того"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="той"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="только"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="том"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="тоьлко"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ты"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="у"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="уже"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="упс"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ф"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="х"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="хороше"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ц"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ч"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="чего"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="чем"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="что"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="чтобы"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ш"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="шта"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="щ"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ъ"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ы"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ыбть"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ь"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="э"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="эта"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="эти"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="это"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="этот"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ю"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="я"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog>

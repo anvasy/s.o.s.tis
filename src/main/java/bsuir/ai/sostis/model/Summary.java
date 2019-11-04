@@ -14,7 +14,6 @@ import javax.persistence.Entity;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 public class Summary {
     String source;
     String essay;
