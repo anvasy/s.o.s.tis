@@ -1,7 +1,6 @@
 package bsuir.ai.sostis.utils;
 
 import bsuir.ai.sostis.model.Document;
-import bsuir.ai.sostis.model.Paragraph;
 import bsuir.ai.sostis.model.Sentence;
 import bsuir.ai.sostis.model.Word;
 import bsuir.ai.sostis.repository.StopWordRepository;
@@ -33,26 +32,26 @@ public class TextUtils {
         String docText = new String(file.getBytes());
 
         List<String> par = Arrays.asList(docText.split("\\n"));
-        List<Paragraph> paragraphs = new ArrayList<>();
+        List<Sentence> sentences = new ArrayList<>();
         for(int i = 0; i < par.size(); i++) {
-            List<Sentence> sentences = new ArrayList<>();
             Matcher matcher = SENTENCE_PATTERN.matcher(par.get(i));
+            int parPos = 0;
             while (matcher.find()) {
-                Sentence sentence = createSentence(sentences.size(), matcher.group());
+                Sentence sentence = createSentence(sentences.size(), parPos, matcher.group());
                 sentences.add(sentence);
+                parPos++;
             }
-            paragraphs.add(createParagraph(i, sentences));
         }
         return ClassicEssayUtils.indexDocument(
                 Document.builder()
                         .text(docText)
-                        .paragraphs(paragraphs)
+                        .sentences(sentences)
                         .title(docTitle)
                         .build()
         );
     }
 
-    private static Sentence createSentence(int sentenceNumber, String sentenceText) {
+    private static Sentence createSentence(int sentenceNumber, int paragraphPosition, String sentenceText) {
         List<Word> words = new ArrayList<>();
         Matcher matcher = WORD_PATTERN.matcher(sentenceText);
         while (matcher.find()) {
@@ -62,6 +61,7 @@ public class TextUtils {
         removeExtraWords(words);
         return Sentence.builder()
                 .number(sentenceNumber)
+                .paragraphPosition(paragraphPosition)
                 .text(sentenceText)
                 .words(words)
                 .build();
@@ -77,13 +77,6 @@ public class TextUtils {
         return Word.builder()
                 .number(wordNumber)
                 .text(wordText)
-                .build();
-    }
-
-    private static Paragraph createParagraph(int paragraphNumber, List<Sentence> sentences) {
-        return Paragraph.builder()
-                .number(paragraphNumber)
-                .sentences(sentences)
                 .build();
     }
 }

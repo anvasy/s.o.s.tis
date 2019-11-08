@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Sentence {
     Integer number;
+    Integer paragraphPosition;
     String text;
     List<Word> words;
     Integer rang;
