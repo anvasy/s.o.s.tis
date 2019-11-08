@@ -1,15 +1,16 @@
 package bsuir.ai.sostis.utils;
 
 import bsuir.ai.sostis.model.Document;
+import bsuir.ai.sostis.model.Paragraph;
 import bsuir.ai.sostis.model.Sentence;
 import bsuir.ai.sostis.model.Word;
 import bsuir.ai.sostis.repository.StopWordRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Objects;
 import java.util.regex.Matcher;
@@ -31,17 +32,21 @@ public class TextUtils {
         String docTitle = file.getOriginalFilename();
         String docText = new String(file.getBytes());
 
-        List<Sentence> sentences = new ArrayList<>();
-        Matcher matcher = SENTENCE_PATTERN.matcher(docText);
-        while (matcher.find()) {
-            Sentence sentence = createSentence(sentences.size(), matcher.group());
-            sentences.add(sentence);
+        List<String> par = Arrays.asList(docText.split("\\n"));
+        List<Paragraph> paragraphs = new ArrayList<>();
+        for(int i = 0; i < par.size(); i++) {
+            List<Sentence> sentences = new ArrayList<>();
+            Matcher matcher = SENTENCE_PATTERN.matcher(par.get(i));
+            while (matcher.find()) {
+                Sentence sentence = createSentence(sentences.size(), matcher.group());
+                sentences.add(sentence);
+            }
+            paragraphs.add(createParagraph(i, sentences));
         }
-
-        return IndexUtil.indexDocument(
+        return ClassicEssayUtils.indexDocument(
                 Document.builder()
                         .text(docText)
-                        .sentences(sentences)
+                        .paragraphs(paragraphs)
                         .title(docTitle)
                         .build()
         );
@@ -72,6 +77,13 @@ public class TextUtils {
         return Word.builder()
                 .number(wordNumber)
                 .text(wordText)
+                .build();
+    }
+
+    private static Paragraph createParagraph(int paragraphNumber, List<Sentence> sentences) {
+        return Paragraph.builder()
+                .number(paragraphNumber)
+                .sentences(sentences)
                 .build();
     }
 }

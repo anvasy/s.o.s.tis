@@ -7,7 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
 import java.util.List;
 
 @Data
@@ -18,5 +17,5 @@ import java.util.List;
 public class Document {
     String title;
     String text;
-    List<Sentence> sentences;
+    List<Paragraph> paragraphs;
 }
