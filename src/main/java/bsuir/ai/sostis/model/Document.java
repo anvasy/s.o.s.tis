@@ -18,4 +18,5 @@ public class Document {
     String title;
     String text;
     List<Paragraph> paragraphs;
+    List<Sentence> sentences;
 }

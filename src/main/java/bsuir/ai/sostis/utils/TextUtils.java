@@ -9,12 +9,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Component
 public class TextUtils {
@@ -24,6 +22,7 @@ public class TextUtils {
     private static final Pattern SENTENCE_PATTERN = Pattern.compile("[A-ZА-Я]+[A-Za-zА-Яа-я0-9,;'\"\\s]*[.?!]\\s*");
     private static final Pattern WORD_PATTERN = Pattern.compile("[A-Za-zА-Яа-я]+[,;'\"\\s]\\s*");
 
+    @SuppressWarnings("AccessStaticViaInstance")
     public TextUtils(StopWordRepository stopWordRepository) {
         this.stopWordRepository = stopWordRepository;
     }
@@ -41,15 +40,21 @@ public class TextUtils {
                 Sentence sentence = createSentence(sentences.size(), matcher.group());
                 sentences.add(sentence);
             }
-            paragraphs.add(createParagraph(i, sentences));
+            paragraphs.add(createParagraph(i, sentences, par.get(i)));
         }
-        return ClassicEssayUtils.indexDocument(
-                Document.builder()
+        return Document.builder()
                         .text(docText)
                         .paragraphs(paragraphs)
+                        .sentences(getSentences(paragraphs))
                         .title(docTitle)
-                        .build()
-        );
+                        .build();
+    }
+
+    private static List<Sentence> getSentences(List<Paragraph> paragraphs) {
+        return paragraphs.stream()
+                .map(Paragraph::getSentences)
+                .flatMap(Collection::stream)
+                .collect(Collectors.toList());
     }
 
     private static Sentence createSentence(int sentenceNumber, String sentenceText) {
@@ -80,10 +85,11 @@ public class TextUtils {
                 .build();
     }
 
-    private static Paragraph createParagraph(int paragraphNumber, List<Sentence> sentences) {
+    private static Paragraph createParagraph(int paragraphNumber, List<Sentence> sentences, String text) {
         return Paragraph.builder()
                 .number(paragraphNumber)
                 .sentences(sentences)
+                .text(text)
                 .build();
     }
 }

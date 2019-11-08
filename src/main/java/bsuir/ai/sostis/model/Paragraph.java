@@ -16,5 +16,6 @@ import java.util.List;
 @NoArgsConstructor
 public class Paragraph {
     Integer number;
+    String text;
     List<Sentence> sentences;
 }
