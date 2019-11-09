@@ -23,8 +23,8 @@ public class TextUtils {
 
     private static StopWordRepository stopWordRepository;
 
-    private static final Pattern SENTENCE_PATTERN = Pattern.compile("[A-ZА-Я]+[A-Za-zА-Яа-я0-9,;'\"\\s]*[.?!]\\s*");
-    private static final Pattern WORD_PATTERN = Pattern.compile("[A-Za-zА-Яа-я]+[,;'\"\\s]\\s*");
+    private static final Pattern SENTENCE_PATTERN = Pattern.compile("[A-ZА-Я]+[A-Za-zА-Яа-я0-9,;:\\-'\"\\s]*[.?!]\\s*");
+    private static final Pattern WORD_PATTERN = Pattern.compile("[A-Za-zА-Яа-я]+[,;:\\-'\"\\s]\\s*");
 
     @SuppressWarnings("AccessStaticViaInstance")
     public TextUtils(StopWordRepository stopWordRepository) {
@@ -33,16 +33,18 @@ public class TextUtils {
 
     public static Document createDocument(MultipartFile file) throws IOException {
         String docTitle = file.getOriginalFilename();
-        String docText = new String(file.getBytes());
+        String docText = new String(file.getBytes()).replaceAll("\r", "");
 
-        List<String> par = Arrays.asList(docText.split("\\n"));
+        List<String> par = Arrays.asList(docText.split("\n"));
         List<Paragraph> paragraphs = new ArrayList<>();
+        int sentNum = 0;
         for(int i = 0; i < par.size(); i++) {
             List<Sentence> sentences = new ArrayList<>();
             Matcher matcher = SENTENCE_PATTERN.matcher(par.get(i));
             while (matcher.find()) {
-                Sentence sentence = createSentence(sentences.size(), matcher.group());
+                Sentence sentence = createSentence(sentNum, sentences.size(), matcher.group());
                 sentences.add(sentence);
+                sentNum++;
             }
             paragraphs.add(createParagraph(i, sentences, par.get(i)));
         }
@@ -61,7 +63,7 @@ public class TextUtils {
                 .collect(Collectors.toList());
     }
 
-    private static Sentence createSentence(int sentenceNumber, String sentenceText) {
+    private static Sentence createSentence(int sentenceNumber, int parPos, String sentenceText) {
         List<Word> words = new ArrayList<>();
         Matcher matcher = WORD_PATTERN.matcher(sentenceText);
         while (matcher.find()) {
@@ -71,6 +73,7 @@ public class TextUtils {
         removeExtraWords(words);
         return Sentence.builder()
                 .number(sentenceNumber)
+                .paragraphPosition(parPos)
                 .text(sentenceText)
                 .words(words)
                 .build();

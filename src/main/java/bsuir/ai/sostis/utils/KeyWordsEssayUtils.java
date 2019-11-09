@@ -8,6 +8,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 import java.util.Set;
+import java.util.HashSet;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -44,6 +45,9 @@ public class KeyWordsEssayUtils {
         List<Word> result = words.stream()
                 .sorted(Comparator.comparingDouble(Word::getRank).reversed())
                 .collect(Collectors.toList());
+        Set<Object> seen = new HashSet<>();
+        result.removeIf(r-> !seen.add(r.getText()));
+
         return result.size() > KEY_WORDS_NUMBER ?
                 result.subList(0, KEY_WORDS_NUMBER) :
                 result;

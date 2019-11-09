@@ -5,6 +5,132 @@
 
     <changeSet id="insert_stop_word" author="Ann Vasilyeva">
         <insert tableName="stop_word">
+            <column name="stop_word_text" value="a"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="AFAIK"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="AFAIR"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="and"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="b"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="c"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="e"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="eek"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="f"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ftp"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="g"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="grin"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="h"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="http"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="i"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="imho"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="j"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="k"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="l"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="m"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="mrgreen"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="not"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="o"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="oops"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="or"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="p"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="q"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="r"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="razz"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="roll"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="s"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="smile"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="twisted"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="u"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="v"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="w"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="web"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="wink"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="www"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="x"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="y"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="z"/>
+        </insert>
+        <insert tableName="stop_word">
             <column name="stop_word_text" value="а"/>
         </insert>
         <insert tableName="stop_word">
@@ -245,9 +371,6 @@
             <column name="stop_word_text" value="нах"/>
         </insert>
         <insert tableName="stop_word">
-            <column name="stop_word_text" value="нас"/>
-        </insert>
-        <insert tableName="stop_word">
             <column name="stop_word_text" value="наш"/>
         </insert>
         <insert tableName="stop_word">
@@ -456,6 +579,726 @@
         </insert>
         <insert tableName="stop_word">
             <column name="stop_word_text" value="я"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="about"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="after"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ago"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="all"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="almost"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="along"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="alot"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="also"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="am"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="an"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="answer"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="any"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="anybody"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="anybodys"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="anywhere"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="are"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="arent"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="around"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="as"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ask"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="askd"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="at"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="bad"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="be"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="because"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="been"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="before"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="being"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="best"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="better"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="between"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="big"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="btw"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="but"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="by"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="can"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="cant"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="come"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="could"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="couldnt"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="day"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="days"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="did"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="didnt"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="do"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="does"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="doesnt"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="dont"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="down"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="each"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="either"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="else"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="etc"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="even"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ever"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="every"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="everybody"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="everybodys"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="everyone"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="far"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="find"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="for"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="found"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="from"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="get"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="go"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="going"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="gone"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="good"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="got"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="gotten"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="had"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="has"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="have"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="havent"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="having"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="her"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="here"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="hers"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="him"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="his"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="home"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="how"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="hows"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="href"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="I"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="if"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="IIRC"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="in"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ini"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="into"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="is"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="isnt"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="it"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="its"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="Ive"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="just"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="know"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="large"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="less"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="like"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="liked"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="little"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="LOL"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="look"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="looked"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="looking"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="lot"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="many"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="maybe"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="me"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="more"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="most"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="much"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="must"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="mustnt"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="my"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="near"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="need"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="never"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="new"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="news"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="no"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="none"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="nothing"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="now"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="of"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="off"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="often"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="old"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="on"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="once"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="only"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="other"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="our"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ours"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="out"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="over"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="page"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="please"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="put"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="question"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="questioned"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="questions"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="quote"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="rather"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="really"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="recent"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ROTF"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="ROTFLMAO"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="said"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="saw"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="say"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="says"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="see"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="sees"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="she"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="should"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="sites"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="small"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="so"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="some"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="something"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="sometime"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="somewhere"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="soon"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="take"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="than"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="thank"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="that"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="thatd"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="thats"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="the"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="their"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="theirs"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="them"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="then"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="there"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="theres"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="these"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="they"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="theyd"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="theyll"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="theyre"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="this"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="those"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="though"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="through"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="thus"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="time"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="times"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="to"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="too"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="true"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="under"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="until"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="untrue"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="up"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="upon"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="use"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="users"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="version"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="very"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="via"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="want"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="was"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="way"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="we"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="well"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="went"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="were"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="werent"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="what"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="when"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="where"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="which"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="who"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="whom"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="whose"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="why"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="wide"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="will"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="with"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="within"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="without"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="wont"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="world"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="worse"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="worst"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="would"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="wrote"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="yes"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="yet"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="YMMV"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="you"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="youd"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="youll"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="your"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="youre"/>
+        </insert>
+        <insert tableName="stop_word">
+            <column name="stop_word_text" value="yours"/>
         </insert>
     </changeSet>
 </databaseChangeLog>
