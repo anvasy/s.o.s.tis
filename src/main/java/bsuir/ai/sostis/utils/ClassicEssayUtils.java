@@ -5,11 +5,16 @@ import bsuir.ai.sostis.model.Paragraph;
 import bsuir.ai.sostis.model.Sentence;
 import bsuir.ai.sostis.model.Summary;
 import bsuir.ai.sostis.model.Word;
+import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 import java.util.stream.Collectors;
 
+@Component
 public class ClassicEssayUtils {
 
     private static final int SENTENCE_NUMBER = 5;
@@ -27,7 +32,7 @@ public class ClassicEssayUtils {
             for(Sentence sentence : paragraph.getSentences()) {
                 double BD = paragraph.getText().indexOf(sentence.getText());
                 double BP = document.getText().indexOf(sentence.getText());
-                sentence.setRang((1 - BD/D) * (1 - BP/P) *  countTFIDF(sentence, document, maxOcc));
+                sentence.setRank((1 - BD/D) * (1 - BP/P) *  countTFIDF(sentence, document, maxOcc));
             }
         }
     }
@@ -68,7 +73,7 @@ public class ClassicEssayUtils {
     private static Summary buildSummary(Document document) {
         StringBuilder summary = new StringBuilder();
         List<Sentence> sentences = document.getSentences().stream()
-                .sorted(Comparator.comparingDouble(Sentence::getRang).reversed())
+                .sorted(Comparator.comparingDouble(Sentence::getRank).reversed())
                 .collect(Collectors.toList())
                 .subList(0, SENTENCE_NUMBER);
         sentences.sort(Comparator.comparingInt(Sentence::getNumber));

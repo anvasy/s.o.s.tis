@@ -15,5 +15,5 @@ import lombok.experimental.FieldDefaults;
 public class Word {
     Integer number;
     String text;
-    Integer rank;
+    Double rank;
 }

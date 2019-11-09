@@ -19,5 +19,5 @@ public class Sentence {
     Integer paragraphPosition;
     String text;
     List<Word> words;
-    Double rang;
+    Double rank;
 }
