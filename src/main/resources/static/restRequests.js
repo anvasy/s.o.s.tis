@@ -18,9 +18,9 @@ summaryForm.addEventListener('submit', function (e) {
             result += "-essay : " + response.classicEssay.essay + '<br>';
 
             result += "Key Words Essay:<br>";
-            for (let i = 0; i < response.keyWordsEssay; i++) {
+            for (let i = 0; i < response.keyWordsEssay.length; i++) {
                 let word = response.keyWordsEssay[i];
-                result += "-word: " + word + '<br>';
+                result += "-word: " + word.text + '<br>';
             }
 
             result += "Response time : " + response.responseTime + 'sec' + '<br>';

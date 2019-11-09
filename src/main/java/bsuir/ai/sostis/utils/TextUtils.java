@@ -65,7 +65,7 @@ public class TextUtils {
         List<Word> words = new ArrayList<>();
         Matcher matcher = WORD_PATTERN.matcher(sentenceText);
         while (matcher.find()) {
-            Word word = createWord(words.size(), matcher.group());
+            Word word = createWord(words.size(), matcher.group().toLowerCase());
             words.add(word);
         }
         removeExtraWords(words);
@@ -77,7 +77,7 @@ public class TextUtils {
     }
 
     private static void removeExtraWords(List<Word> words) {
-        words.removeIf(word -> word.getText().matches("[^А-Яа-я]+"));
+        words.removeIf(word -> word.getText().matches("[^А-Яа-яA-Za-z]+"));
         words.forEach(word -> word.setText(word.getText().replaceAll("[\\s,.():!?]", "")));
         words.removeIf(word -> Objects.nonNull(stopWordRepository.findByText(word.getText())));
     }
