@@ -36,21 +36,23 @@ public class KeyWordsEssayUtils {
                 .reduce(0, Integer::sum);
         Map<String, Double> ostisValues = ostisService.calculateRanks(document);
 
-        for(Word word : words) {
-            word.setRank(((double)wordOccurrences.get(word.getText())/wordNumber)
+        for (Word word : words) {
+            word.setRank(((double) wordOccurrences.get(word.getText()) / wordNumber)
                     * ostisValues.getOrDefault(word.getText(), 0.0));
         }
 
-        return words.stream()
+        List<Word> result = words.stream()
                 .sorted(Comparator.comparingDouble(Word::getRank).reversed())
-                .collect(Collectors.toList())
-                .subList(0, KEY_WORDS_NUMBER);
+                .collect(Collectors.toList());
+        return result.size() > KEY_WORDS_NUMBER ?
+                result.subList(0, KEY_WORDS_NUMBER) :
+                result;
     }
 
     private static Map<String, Integer> countOccurrences(Document document) {
         Map<String, Integer> wordOccurrences = new HashMap<>();
         for (Sentence sentence : document.getSentences()) {
-            for(Word word : sentence.getWords()) {
+            for (Word word : sentence.getWords()) {
                 wordOccurrences.computeIfPresent(word.getText(), (k, v) -> v + 1);
                 wordOccurrences.putIfAbsent(word.getText(), 1);
             }

@@ -27,12 +27,12 @@ public class ClassicEssayUtils {
     private static void rankSentences(Document document) {
         int D = document.getText().length();
         int maxOcc = countMax(document);
-        for(Paragraph paragraph : document.getParagraphs()) {
+        for (Paragraph paragraph : document.getParagraphs()) {
             int P = paragraph.getText().length();
-            for(Sentence sentence : paragraph.getSentences()) {
+            for (Sentence sentence : paragraph.getSentences()) {
                 double BD = paragraph.getText().indexOf(sentence.getText());
                 double BP = document.getText().indexOf(sentence.getText());
-                sentence.setRank((1 - BD/D) * (1 - BP/P) *  countTFIDF(sentence, document, maxOcc));
+                sentence.setRank((1 - BD / D) * (1 - BP / P) * countTFIDF(sentence, document, maxOcc));
             }
         }
     }
@@ -74,8 +74,10 @@ public class ClassicEssayUtils {
         StringBuilder summary = new StringBuilder();
         List<Sentence> sentences = document.getSentences().stream()
                 .sorted(Comparator.comparingDouble(Sentence::getRank).reversed())
-                .collect(Collectors.toList())
-                .subList(0, SENTENCE_NUMBER);
+                .collect(Collectors.toList());
+        if (sentences.size() > SENTENCE_NUMBER) {
+            sentences = sentences.subList(0, SENTENCE_NUMBER);
+        }
         sentences.sort(Comparator.comparingInt(Sentence::getNumber));
         sentences.forEach(sentence -> summary.append(sentence.getText()));
 
